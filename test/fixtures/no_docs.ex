@@ -1,5 +1,5 @@
 defmodule UndocumentedTest.Fixtures.NoDocs do
-  @doc"""
+  @doc """
   Yay I have some documentation.
   """
   def foo, do: :ok

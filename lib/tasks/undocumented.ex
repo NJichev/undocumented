@@ -18,7 +18,6 @@ defmodule Mix.Tasks.Undocumented do
 
     #{to_bullet_list(report)}
     """)
-
   end
 
   defp to_bullet_list(report) do
