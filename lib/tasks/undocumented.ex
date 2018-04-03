@@ -14,7 +14,7 @@ defmodule Mix.Tasks.Undocumented do
   defp check!(report) do
     Mix.raise("""
     mix undocumented failed
-    The following stuff were undocumented:
+    Found missing documentation for:
 
     #{to_bullet_list(report)}
     """)
