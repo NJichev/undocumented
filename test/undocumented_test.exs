@@ -1,11 +1,10 @@
 defmodule UndocumentedTest do
   use ExUnit.Case
+  import Undocumented
 
   alias UndocumentedTest.Fixtures.NoDocs
 
-  describe "for/1" do
-    test "returns undocumented functions for a module" do
-      assert Undocumented.of(NoDocs) == [{{:bar, 1}, 6}]
-    end
+  test "returns undocumented functions for a module" do
+    assert [{NoDocs, :bar, 1, _line}] = get_missing_docs(NoDocs)
   end
 end

@@ -5,7 +5,7 @@ defmodule Undocumented do
   end
 
 
-  defp get_missing_docs(module) do
+  def get_missing_docs(module) do
     for {{function, arity}, line, _, _, nil} <- Code.get_docs(module, :docs) do
       {module, function, arity, line}
     end
