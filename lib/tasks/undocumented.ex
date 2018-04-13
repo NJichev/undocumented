@@ -1,7 +1,15 @@
 defmodule Mix.Tasks.Undocumented do
+  @moduledoc """
+  The mix tasks that provides `mix undocumented` command.
+
+  Uses `Undocumented.report/0` to retrieve missing docs and
+  formats it to get some nice errors.
+  """
+
   use Mix.Task
   @recursive true
 
+  @doc false
   def run(_) do
     Mix.Task.run("compile")
 
