@@ -1,6 +1,6 @@
 defmodule Undocumented do
   def report do
-    modules()
+    project_modules()
     |> Enum.flat_map(&get_missing_docs/1)
   end
 
@@ -10,7 +10,7 @@ defmodule Undocumented do
     end
   end
 
-  defp modules do
+  defp project_modules do
     Mix.Project.compile_path()
     |> Path.join("Elixir.*.beam")
     |> Path.wildcard()

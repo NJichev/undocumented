@@ -21,8 +21,7 @@ defmodule Undocumented.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    [
-    ]
+    []
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/fixtures"]
