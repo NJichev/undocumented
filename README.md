@@ -1,21 +1,24 @@
 # Undocumented
 
-**TODO: Add description**
+A simple library that checks your project for missing documentation.
+
+## Usage
+
+Undocumented comes with a mix task that you just have to run inside your project:
+
+```bash
+mix undocumented
+```
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `undocumented` to your list of dependencies in `mix.exs`:
+Add undocumented to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:undocumented, "~> 0.1.0"}
+    {:undocumented, "~> 0.1.0", only: [:dev, :test], runtime: false}
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/undocumented](https://hexdocs.pm/undocumented).
 
